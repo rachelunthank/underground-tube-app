@@ -11,6 +11,12 @@
 		883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		883CCDF220C2FE21008A2DA1 /* LinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF120C2FE21008A2DA1 /* LinesState.swift */; };
 		883CCDF420C35679008A2DA1 /* LineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */; };
+		8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871353F20CAB70B0068865B /* NotificationCenter.framework */; };
+		8871354320CAB70B0068865B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8871354220CAB70B0068865B /* TodayViewController.swift */; };
+		8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8871354420CAB70B0068865B /* MainInterface.storyboard */; };
+		8871354A20CAB70B0068865B /* TubeAppTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8871354F20CAB90E0068865B /* LineStatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */; };
+		8871355020CABAA50068865B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */; };
 		88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */; };
 		88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */; };
@@ -27,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8871354820CAB70B0068865B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88C20C99209FAC04007D5CF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8871353C20CAB70B0068865B;
+			remoteInfo = TubeAppTodayExtension;
+		};
 		88C20CB8209FAC04007D5CF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88C20C99209FAC04007D5CF4 /* Project object */;
@@ -43,11 +56,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8871354E20CAB70B0068865B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8871354A20CAB70B0068865B /* TubeAppTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		883CCDED20C2E190008A2DA1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* LinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
+		8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TubeAppTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8871353F20CAB70B0068865B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8871354220CAB70B0068865B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8871354520CAB70B0068865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8871354720CAB70B0068865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLineColors.swift; sourceTree = "<group>"; };
 		88C20CA1209FAC04007D5CF4 /* TubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +102,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8871353A20CAB70B0068865B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88C20C9E209FAC04007D5CF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,12 +134,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8871353E20CAB70B0068865B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8871353F20CAB70B0068865B /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8871354120CAB70B0068865B /* TubeAppTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8871354220CAB70B0068865B /* TodayViewController.swift */,
+				8871354420CAB70B0068865B /* MainInterface.storyboard */,
+				8871354720CAB70B0068865B /* Info.plist */,
+			);
+			path = TubeAppTodayExtension;
+			sourceTree = "<group>";
+		};
 		88C20C98209FAC04007D5CF4 = {
 			isa = PBXGroup;
 			children = (
 				88C20CA3209FAC04007D5CF4 /* TubeApp */,
 				88C20CBA209FAC04007D5CF4 /* TubeAppTests */,
 				88C20CC5209FAC04007D5CF4 /* TubeAppUITests */,
+				8871354120CAB70B0068865B /* TubeAppTodayExtension */,
+				8871353E20CAB70B0068865B /* Frameworks */,
 				88C20CA2209FAC04007D5CF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +170,7 @@
 				88C20CA1209FAC04007D5CF4 /* TubeApp.app */,
 				88C20CB7209FAC04007D5CF4 /* TubeAppTests.xctest */,
 				88C20CC2209FAC04007D5CF4 /* TubeAppUITests.xctest */,
+				8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +219,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8871353C20CAB70B0068865B /* TubeAppTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "TubeAppTodayExtension" */;
+			buildPhases = (
+				8871353920CAB70B0068865B /* Sources */,
+				8871353A20CAB70B0068865B /* Frameworks */,
+				8871353B20CAB70B0068865B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TubeAppTodayExtension;
+			productName = TubeAppTodayExtension;
+			productReference = 8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		88C20CA0209FAC04007D5CF4 /* TubeApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeApp" */;
@@ -165,10 +243,12 @@
 				88C20C9D209FAC04007D5CF4 /* Sources */,
 				88C20C9E209FAC04007D5CF4 /* Frameworks */,
 				88C20C9F209FAC04007D5CF4 /* Resources */,
+				8871354E20CAB70B0068865B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8871354920CAB70B0068865B /* PBXTargetDependency */,
 			);
 			name = TubeApp;
 			productName = TubeApp;
@@ -217,10 +297,14 @@
 		88C20C99209FAC04007D5CF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = knoxx;
 				TargetAttributes = {
+					8871353C20CAB70B0068865B = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
 					88C20CA0209FAC04007D5CF4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -253,11 +337,20 @@
 				88C20CA0209FAC04007D5CF4 /* TubeApp */,
 				88C20CB6209FAC04007D5CF4 /* TubeAppTests */,
 				88C20CC1209FAC04007D5CF4 /* TubeAppUITests */,
+				8871353C20CAB70B0068865B /* TubeAppTodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8871353B20CAB70B0068865B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88C20C9F209FAC04007D5CF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +380,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8871353920CAB70B0068865B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8871355020CABAA50068865B /* Line.swift in Sources */,
+				8871354320CAB70B0068865B /* TodayViewController.swift in Sources */,
+				8871354F20CAB90E0068865B /* LineStatusFetcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88C20C9D209FAC04007D5CF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +426,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8871354920CAB70B0068865B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8871353C20CAB70B0068865B /* TubeAppTodayExtension */;
+			targetProxy = 8871354820CAB70B0068865B /* PBXContainerItemProxy */;
+		};
 		88C20CB9209FAC04007D5CF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88C20CA0209FAC04007D5CF4 /* TubeApp */;
@@ -336,6 +444,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8871354420CAB70B0068865B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8871354520CAB70B0068865B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		88C20CAA209FAC04007D5CF4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -355,6 +471,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8871354B20CAB70B0068865B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6C84G57E3;
+				INFOPLIST_FILE = TubeAppTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp.TubeAppTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8871354C20CAB70B0068865B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6C84G57E3;
+				INFOPLIST_FILE = TubeAppTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp.TubeAppTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		88C20CC9209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +619,7 @@
 		88C20CCC209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
@@ -480,6 +635,7 @@
 		88C20CCD209FAC04007D5CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
@@ -561,6 +717,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "TubeAppTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8871354B20CAB70B0068865B /* Debug */,
+				8871354C20CAB70B0068865B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "TubeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
