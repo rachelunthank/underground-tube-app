@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74883D48221F635D00513203 /* LineStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74883D47221F635D00513203 /* LineStatusView.xib */; };
 		883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		883CCDF220C2FE21008A2DA1 /* LinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF120C2FE21008A2DA1 /* LinesState.swift */; };
 		883CCDF420C35679008A2DA1 /* LineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */; };
@@ -19,8 +20,6 @@
 		88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */; };
 		88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */; };
 		88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */; };
-		88C20CA9209FAC04007D5CF4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA8209FAC04007D5CF4 /* MapViewController.swift */; };
-		88C20CAC209FAC04007D5CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CAA209FAC04007D5CF4 /* Main.storyboard */; };
 		88C20CAE209FAC04007D5CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CAD209FAC04007D5CF4 /* Assets.xcassets */; };
 		88C20CB1209FAC04007D5CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CAF209FAC04007D5CF4 /* LaunchScreen.storyboard */; };
 		88C20CBC209FAC04007D5CF4 /* TubeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CBB209FAC04007D5CF4 /* TubeAppTests.swift */; };
@@ -70,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74883D47221F635D00513203 /* LineStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineStatusView.xib; sourceTree = "<group>"; };
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* LinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
@@ -82,8 +82,6 @@
 		88C20CA1209FAC04007D5CF4 /* TubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStatusViewController.swift; sourceTree = "<group>"; };
-		88C20CA8209FAC04007D5CF4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		88C20CAB209FAC04007D5CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88C20CAD209FAC04007D5CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88C20CB0209FAC04007D5CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C20CB2209FAC04007D5CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */,
+				74883D47221F635D00513203 /* LineStatusView.xib */,
 				88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */,
 				88C20CDA209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift */,
 				88C20CD8209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib */,
@@ -191,8 +190,6 @@
 			children = (
 				887618DF20CC3A850044018E /* Status */,
 				88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */,
-				88C20CA8209FAC04007D5CF4 /* MapViewController.swift */,
-				88C20CAA209FAC04007D5CF4 /* Main.storyboard */,
 				88C20CAD209FAC04007D5CF4 /* Assets.xcassets */,
 				88C20CAF209FAC04007D5CF4 /* LaunchScreen.storyboard */,
 				88C20CB2209FAC04007D5CF4 /* Info.plist */,
@@ -360,11 +357,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74883D48221F635D00513203 /* LineStatusView.xib in Resources */,
 				88C20CD9209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib in Resources */,
 				88F0CE9420C48FD0007B0955 /* LineInfoView.xib in Resources */,
 				88C20CB1209FAC04007D5CF4 /* LaunchScreen.storyboard in Resources */,
 				88C20CAE209FAC04007D5CF4 /* Assets.xcassets in Resources */,
-				88C20CAC209FAC04007D5CF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +397,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */,
-				88C20CA9209FAC04007D5CF4 /* MapViewController.swift in Sources */,
 				883CCDF220C2FE21008A2DA1 /* LinesState.swift in Sources */,
 				88C20CD7209FB31B007D5CF4 /* LineStatusFetcher.swift in Sources */,
 				88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */,
@@ -454,14 +450,6 @@
 				8871354520CAB70B0068865B /* Base */,
 			);
 			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		88C20CAA209FAC04007D5CF4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88C20CAB209FAC04007D5CF4 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		88C20CAF209FAC04007D5CF4 /* LaunchScreen.storyboard */ = {
