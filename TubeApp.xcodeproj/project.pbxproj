@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		883CCDEE20C2E190008A2DA1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDED20C2E190008A2DA1 /* SettingsViewController.swift */; };
 		883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		883CCDF220C2FE21008A2DA1 /* LinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF120C2FE21008A2DA1 /* LinesState.swift */; };
 		883CCDF420C35679008A2DA1 /* LineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */; };
@@ -16,10 +15,7 @@
 		8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8871354420CAB70B0068865B /* MainInterface.storyboard */; };
 		8871354A20CAB70B0068865B /* TubeAppTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8871355020CABAA50068865B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
-		887618E120CC3AF80044018E /* NotificationRepeatDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887618E020CC3AF80044018E /* NotificationRepeatDayViewController.swift */; };
 		887618E220CC3C020044018E /* LineStatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */; };
-		887618E420CC5E6F0044018E /* NotificationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887618E320CC5E6F0044018E /* NotificationState.swift */; };
-		887618E620CC6E430044018E /* NotificationRepeatTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887618E520CC6E430044018E /* NotificationRepeatTimeViewController.swift */; };
 		88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */; };
 		88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */; };
 		88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */; };
@@ -74,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		883CCDED20C2E190008A2DA1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* LinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
@@ -83,9 +78,6 @@
 		8871354220CAB70B0068865B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8871354520CAB70B0068865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8871354720CAB70B0068865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		887618E020CC3AF80044018E /* NotificationRepeatDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepeatDayViewController.swift; sourceTree = "<group>"; };
-		887618E320CC5E6F0044018E /* NotificationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationState.swift; sourceTree = "<group>"; };
-		887618E520CC6E430044018E /* NotificationRepeatTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepeatTimeViewController.swift; sourceTree = "<group>"; };
 		88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLineColors.swift; sourceTree = "<group>"; };
 		88C20CA1209FAC04007D5CF4 /* TubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,17 +150,6 @@
 			path = TubeAppTodayExtension;
 			sourceTree = "<group>";
 		};
-		887618DE20CC3A6F0044018E /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				883CCDED20C2E190008A2DA1 /* SettingsViewController.swift */,
-				887618E020CC3AF80044018E /* NotificationRepeatDayViewController.swift */,
-				887618E520CC6E430044018E /* NotificationRepeatTimeViewController.swift */,
-				887618E320CC5E6F0044018E /* NotificationState.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		887618DF20CC3A850044018E /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				887618DF20CC3A850044018E /* Status */,
-				887618DE20CC3A6F0044018E /* Settings */,
 				88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */,
 				88C20CA8209FAC04007D5CF4 /* MapViewController.swift */,
 				88C20CAA209FAC04007D5CF4 /* Main.storyboard */,
@@ -419,9 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				887618E120CC3AF80044018E /* NotificationRepeatDayViewController.swift in Sources */,
 				88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */,
-				887618E620CC6E430044018E /* NotificationRepeatTimeViewController.swift in Sources */,
 				88C20CA9209FAC04007D5CF4 /* MapViewController.swift in Sources */,
 				883CCDF220C2FE21008A2DA1 /* LinesState.swift in Sources */,
 				88C20CD7209FB31B007D5CF4 /* LineStatusFetcher.swift in Sources */,
@@ -430,8 +408,6 @@
 				88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */,
 				88C20CDB209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift in Sources */,
 				883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */,
-				887618E420CC5E6F0044018E /* NotificationState.swift in Sources */,
-				883CCDEE20C2E190008A2DA1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,5 @@
 //
-//  LineStatusCollectionViewCell.swift
-//  TubeApp
-//
-//  Created by Rachel McGreevy on 07/05/2018.
-//  Copyright © 2018 knoxx. All rights reserved.
+//  Copyright © 2019 rachelunthank. All rights reserved.
 //
 
 import Foundation
