@@ -8,8 +8,8 @@ class LineStatusViewController: UIViewController {
     
     @IBOutlet var tubeLineCollectionView: UICollectionView?
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout?
+
     let cellIdentifier = "tubeLineCellIdentifier"
-    var longPressGesture: UILongPressGestureRecognizer?
     var currentLineStatus: [Line]?
     var lastUpdatedTime: Date?
     
@@ -33,11 +33,8 @@ class LineStatusViewController: UIViewController {
         collectionViewFlowLayout?.minimumLineSpacing = 0
         collectionViewFlowLayout?.minimumInteritemSpacing = 0
 
-        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(changeLineOrder(gesture:)))
-
-        if let gesture = longPressGesture {
-            tubeLineCollectionView?.addGestureRecognizer(gesture)
-        }
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(changeLineOrder(gesture:)))
+        tubeLineCollectionView?.addGestureRecognizer(longPressGesture)
 
         let savedState = readSavedLineState()
         self.currentLineStatus = savedState?.lineStatus

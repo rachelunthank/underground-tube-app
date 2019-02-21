@@ -9,7 +9,11 @@ public class LineInfoViewController: UIViewController {
 
     let line: Line
 
-    @IBOutlet var lineInfoView: UIView!
+    @IBOutlet var lineInfoView: UIView! {
+        didSet {
+            lineInfoView.layer.cornerRadius = 11.0
+        }
+    }
     @IBOutlet var lineTitleLabel: UILabel!
     @IBOutlet var lineStatusIconImageView: UIImageView!
     @IBOutlet var lineStatusDescriptionLabel: UILabel!
@@ -26,10 +30,6 @@ public class LineInfoViewController: UIViewController {
     public override func viewDidLoad() {
         view.backgroundColor = UIColor.white.withAlphaComponent(0.7)
 
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissView))
-        view.addGestureRecognizer(tapGesture)
-
-        lineInfoView.layer.cornerRadius = 11.0
         lineInfoView.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
         lineTitleLabel?.text = line.name
         lineStatusIconImageView.image = line.status == "Good Service" ? UIImage(named: "GoodService") : UIImage(named: "Warning")
@@ -37,7 +37,7 @@ public class LineInfoViewController: UIViewController {
         lineStatusDescriptionLabel.sizeToFit()
     }
 
-    @objc func dismissView() {
+    @IBAction func closeView(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
