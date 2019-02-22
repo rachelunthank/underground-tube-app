@@ -26,7 +26,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
 
-        LineStatusFetcher.update(completion: { (status, updateTime) in
+        let networkService = LineStatusFetcher()
+
+        networkService.update(completion: { (status, updateTime) in
 
             guard let status = status, let _ = updateTime else {
                 completionHandler(.failed)

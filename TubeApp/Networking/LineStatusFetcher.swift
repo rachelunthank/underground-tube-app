@@ -4,11 +4,11 @@
 
 import Foundation
 
-public final class LineStatusFetcher {
+class LineStatusFetcher: NetworkService {
     
-    private static let apiUrlString = "https://api.tfl.gov.uk/Line/Mode/tube%2Cdlr%2Coverground%2Ctram%2Ctflrail%2Ccable-car/Status?detail=false"
+    private let apiUrlString = "https://api.tfl.gov.uk/Line/Mode/tube%2Cdlr%2Coverground%2Ctram%2Ctflrail%2Ccable-car/Status?detail=false"
     
-    public static func update(completion: @escaping ([Line]?, Date?) -> Void) {
+    public func update(completion: @escaping ([Line]?, Date?) -> Void) {
         
         guard let apiUrl = URL(string: apiUrlString) else {
             return
@@ -29,7 +29,7 @@ public final class LineStatusFetcher {
         }).resume()
     }
     
-    private static func updateCurrentStatus(with json: [AnyObject]) -> [Line] {
+    private func updateCurrentStatus(with json: [AnyObject]) -> [Line] {
 
         var tubeLineStatus = [Line]()
 

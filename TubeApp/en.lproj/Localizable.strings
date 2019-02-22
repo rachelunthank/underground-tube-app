@@ -1,0 +1,7 @@
+//
+//  Copyright © 2019 rachelunthank. All rights reserved.
+//
+
+"good.service" = "Good Service";
+"live.status" = "Live Status";
+"last.updated" = "Last Updated: {time}";

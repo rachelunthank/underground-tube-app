@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let statusViewController = LineStatusViewController()
+        let networkService = LineStatusFetcher()
+        let statusViewController = LineStatusViewController(service: networkService)
         let navController = UINavigationController(rootViewController: statusViewController)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
@@ -43,15 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func registerForPushNotifications() {
-
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
-            (granted, error) in
-
-            guard granted else { return }
-        }
     }
 }
 

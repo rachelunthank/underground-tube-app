@@ -28,7 +28,6 @@ public class LineInfoViewController: UIViewController {
     }
 
     public override func viewDidLoad() {
-        view.backgroundColor = UIColor.white.withAlphaComponent(0.7)
 
         lineInfoView.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
         lineTitleLabel?.text = line.name

@@ -65,7 +65,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.698090889084507" colorSpace="custom" customColorSpace="sRGB"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="X26-Yb-guf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Drc-2Q-PfP"/>

@@ -10,13 +10,25 @@ class LineStatusViewController: UIViewController {
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout?
 
     let cellIdentifier = "tubeLineCellIdentifier"
+
     var currentLineStatus: [Line]?
     var lastUpdatedTime: Date?
-    
+
+    let networkService: NetworkService
+
+    init(service: NetworkService) {
+        self.networkService = service
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Live Status"
+        self.title = NSLocalizedString("live.status", comment: "")
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(reloadStatus), for: .valueChanged)
@@ -40,7 +52,7 @@ class LineStatusViewController: UIViewController {
         self.currentLineStatus = savedState?.lineStatus
         self.lastUpdatedTime = savedState?.lastUpdatedTimestamp
 
-        LineStatusFetcher.update(completion: { (status, updateTime) in
+        networkService.update(completion: { (status, updateTime) in
 
             guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
                 print("Status update returned empty status")
@@ -62,7 +74,7 @@ class LineStatusViewController: UIViewController {
     
     @objc func reloadStatus() {
         tubeLineCollectionView?.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
-        LineStatusFetcher.update(completion: { (status, updateTime) in
+        networkService.update(completion: { (status, updateTime) in
 
             guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
                 print("Status update returned empty status / timestamp")
@@ -76,6 +88,7 @@ class LineStatusViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tubeLineCollectionView?.reloadData()
                 self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+                let lastUpdatedString = String(.lastUpdated).replacingOccurrences(of: "{time}", with: updateTime)
                 self.tubeLineCollectionView?.refreshControl?.attributedTitle = NSAttributedString(string:"Last Updated: \(updateTime)")
             }
         })
