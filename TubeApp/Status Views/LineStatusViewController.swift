@@ -45,31 +45,23 @@ class LineStatusViewController: UIViewController {
         collectionViewFlowLayout?.minimumLineSpacing = 0
         collectionViewFlowLayout?.minimumInteritemSpacing = 0
 
-        let savedState = readSavedLineState()
-        self.currentLineStatus = savedState?.lineStatus
-        self.lastUpdatedTime = savedState?.lastUpdatedTimestamp
+        if let savedState = readSavedLineState() {
+            self.currentLineStatus = savedState.lineStatus
+            self.lastUpdatedTime = savedState.lastUpdatedTimestamp
+        }
 
-        networkService.update(completion: { (status, updateTime) in
-
-            guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
-                print("Status update returned empty status")
-                if self.currentLineStatus == nil {
-                    // show error screen?
-                }
-                return
-            }
-
-            self.currentLineStatus = updatedStatus
-            self.lastUpdatedTime = updateTime
-            self.save(linesState: updatedStatus, forTimestamp: updateTime)
-
-            DispatchQueue.main.async {
-                self.tubeLineCollectionView?.reloadData()
-            }
-        })
+        fetchUpdateFromNetwork(completion: nil)
     }
     
     @objc func reloadStatus() {
+
+        fetchUpdateFromNetwork(completion: {
+            self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+        })
+    }
+
+    func fetchUpdateFromNetwork(completion: (() -> Void)?) {
+
         networkService.update(completion: { (status, updateTime) in
 
             guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
@@ -83,9 +75,10 @@ class LineStatusViewController: UIViewController {
 
             DispatchQueue.main.async {
                 self.tubeLineCollectionView?.reloadData()
-                self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+                completion?()
             }
         })
+
     }
 
     func save(linesState state: [Line], forTimestamp lastUpdated: Date) {
@@ -175,6 +168,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
+// MARK: - Gesture Recognizer Functions
 extension LineStatusViewController {
 
     @IBAction func editLineOrder(_ sender: UILongPressGestureRecognizer) {
