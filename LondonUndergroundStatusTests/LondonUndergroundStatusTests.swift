@@ -3,9 +3,9 @@
 //
 
 import XCTest
-@testable import TubeApp
+@testable import LondonUndergroundStatus
 
-class TubeAppTests: XCTestCase {
+class LondonUndergroundStatusTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

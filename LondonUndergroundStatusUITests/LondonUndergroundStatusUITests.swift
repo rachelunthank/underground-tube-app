@@ -4,7 +4,7 @@
 
 import XCTest
 
-class TubeAppUITests: XCTestCase {
+class LondonUndergroundStatusUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

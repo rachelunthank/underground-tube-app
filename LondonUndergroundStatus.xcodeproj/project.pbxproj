@@ -19,7 +19,7 @@
 		8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871353F20CAB70B0068865B /* NotificationCenter.framework */; };
 		8871354320CAB70B0068865B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8871354220CAB70B0068865B /* TodayViewController.swift */; };
 		8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8871354420CAB70B0068865B /* MainInterface.storyboard */; };
-		8871354A20CAB70B0068865B /* TubeAppTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8871354A20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8871355020CABAA50068865B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		887618E220CC3C020044018E /* LineStatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */; };
 		88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */; };
@@ -27,8 +27,8 @@
 		88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */; };
 		88C20CAE209FAC04007D5CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CAD209FAC04007D5CF4 /* Assets.xcassets */; };
 		88C20CB1209FAC04007D5CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CAF209FAC04007D5CF4 /* LaunchScreen.storyboard */; };
-		88C20CBC209FAC04007D5CF4 /* TubeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CBB209FAC04007D5CF4 /* TubeAppTests.swift */; };
-		88C20CC7209FAC04007D5CF4 /* TubeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CC6209FAC04007D5CF4 /* TubeAppUITests.swift */; };
+		88C20CBC209FAC04007D5CF4 /* LondonUndergroundStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CBB209FAC04007D5CF4 /* LondonUndergroundStatusTests.swift */; };
+		88C20CC7209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CC6209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift */; };
 		88C20CD7209FB31B007D5CF4 /* LineStatusFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */; };
 		88C20CD9209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CD8209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib */; };
 		88C20CDB209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CDA209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift */; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8871354A20CAB70B0068865B /* TubeAppTodayExtension.appex in Embed App Extensions */,
+				8871354A20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,23 +82,23 @@
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* LinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
-		8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TubeAppTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LondonUndergroundStatusTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8871353F20CAB70B0068865B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8871354220CAB70B0068865B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8871354520CAB70B0068865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8871354720CAB70B0068865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLineColors.swift; sourceTree = "<group>"; };
-		88C20CA1209FAC04007D5CF4 /* TubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C20CA1209FAC04007D5CF4 /* LondonUndergroundStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LondonUndergroundStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStatusViewController.swift; sourceTree = "<group>"; };
 		88C20CAD209FAC04007D5CF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88C20CB0209FAC04007D5CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88C20CB2209FAC04007D5CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88C20CB7209FAC04007D5CF4 /* TubeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88C20CBB209FAC04007D5CF4 /* TubeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeAppTests.swift; sourceTree = "<group>"; };
+		88C20CB7209FAC04007D5CF4 /* LondonUndergroundStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LondonUndergroundStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C20CBB209FAC04007D5CF4 /* LondonUndergroundStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonUndergroundStatusTests.swift; sourceTree = "<group>"; };
 		88C20CBD209FAC04007D5CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88C20CC2209FAC04007D5CF4 /* TubeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88C20CC6209FAC04007D5CF4 /* TubeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeAppUITests.swift; sourceTree = "<group>"; };
+		88C20CC2209FAC04007D5CF4 /* LondonUndergroundStatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LondonUndergroundStatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C20CC6209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonUndergroundStatusUITests.swift; sourceTree = "<group>"; };
 		88C20CC8209FAC04007D5CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88C20CD6209FB31B007D5CF4 /* LineStatusFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStatusFetcher.swift; sourceTree = "<group>"; };
 		88C20CD8209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineStatusCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -175,14 +175,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8871354120CAB70B0068865B /* TubeAppTodayExtension */ = {
+		8871354120CAB70B0068865B /* LondonUndergroundStatusTodayExtension */ = {
 			isa = PBXGroup;
 			children = (
 				8871354220CAB70B0068865B /* TodayViewController.swift */,
 				8871354420CAB70B0068865B /* MainInterface.storyboard */,
 				8871354720CAB70B0068865B /* Info.plist */,
 			);
-			path = TubeAppTodayExtension;
+			path = LondonUndergroundStatusTodayExtension;
 			sourceTree = "<group>";
 		};
 		887618DF20CC3A850044018E /* Status Views */ = {
@@ -201,10 +201,10 @@
 		88C20C98209FAC04007D5CF4 = {
 			isa = PBXGroup;
 			children = (
-				88C20CA3209FAC04007D5CF4 /* TubeApp */,
-				88C20CBA209FAC04007D5CF4 /* TubeAppTests */,
-				88C20CC5209FAC04007D5CF4 /* TubeAppUITests */,
-				8871354120CAB70B0068865B /* TubeAppTodayExtension */,
+				88C20CA3209FAC04007D5CF4 /* LondonUndergroundStatus */,
+				88C20CBA209FAC04007D5CF4 /* LondonUndergroundStatusTests */,
+				88C20CC5209FAC04007D5CF4 /* LondonUndergroundStatusUITests */,
+				8871354120CAB70B0068865B /* LondonUndergroundStatusTodayExtension */,
 				8871353E20CAB70B0068865B /* Frameworks */,
 				88C20CA2209FAC04007D5CF4 /* Products */,
 			);
@@ -213,15 +213,15 @@
 		88C20CA2209FAC04007D5CF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88C20CA1209FAC04007D5CF4 /* TubeApp.app */,
-				88C20CB7209FAC04007D5CF4 /* TubeAppTests.xctest */,
-				88C20CC2209FAC04007D5CF4 /* TubeAppUITests.xctest */,
-				8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */,
+				88C20CA1209FAC04007D5CF4 /* LondonUndergroundStatus.app */,
+				88C20CB7209FAC04007D5CF4 /* LondonUndergroundStatusTests.xctest */,
+				88C20CC2209FAC04007D5CF4 /* LondonUndergroundStatusUITests.xctest */,
+				8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88C20CA3209FAC04007D5CF4 /* TubeApp */ = {
+		88C20CA3209FAC04007D5CF4 /* LondonUndergroundStatus */ = {
 			isa = PBXGroup;
 			children = (
 				749383C622204C51004CC0EF /* Supporting */,
@@ -234,33 +234,33 @@
 				88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */,
 				749383C422204B82004CC0EF /* LocalizedStrings.swift */,
 			);
-			path = TubeApp;
+			path = LondonUndergroundStatus;
 			sourceTree = "<group>";
 		};
-		88C20CBA209FAC04007D5CF4 /* TubeAppTests */ = {
+		88C20CBA209FAC04007D5CF4 /* LondonUndergroundStatusTests */ = {
 			isa = PBXGroup;
 			children = (
-				88C20CBB209FAC04007D5CF4 /* TubeAppTests.swift */,
+				88C20CBB209FAC04007D5CF4 /* LondonUndergroundStatusTests.swift */,
 				88C20CBD209FAC04007D5CF4 /* Info.plist */,
 			);
-			path = TubeAppTests;
+			path = LondonUndergroundStatusTests;
 			sourceTree = "<group>";
 		};
-		88C20CC5209FAC04007D5CF4 /* TubeAppUITests */ = {
+		88C20CC5209FAC04007D5CF4 /* LondonUndergroundStatusUITests */ = {
 			isa = PBXGroup;
 			children = (
-				88C20CC6209FAC04007D5CF4 /* TubeAppUITests.swift */,
+				88C20CC6209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift */,
 				88C20CC8209FAC04007D5CF4 /* Info.plist */,
 			);
-			path = TubeAppUITests;
+			path = LondonUndergroundStatusUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8871353C20CAB70B0068865B /* TubeAppTodayExtension */ = {
+		8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "TubeAppTodayExtension" */;
+			buildConfigurationList = 8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTodayExtension" */;
 			buildPhases = (
 				8871353920CAB70B0068865B /* Sources */,
 				8871353A20CAB70B0068865B /* Frameworks */,
@@ -270,14 +270,14 @@
 			);
 			dependencies = (
 			);
-			name = TubeAppTodayExtension;
+			name = LondonUndergroundStatusTodayExtension;
 			productName = TubeAppTodayExtension;
-			productReference = 8871353D20CAB70B0068865B /* TubeAppTodayExtension.appex */;
+			productReference = 8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		88C20CA0209FAC04007D5CF4 /* TubeApp */ = {
+		88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeApp" */;
+			buildConfigurationList = 88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatus" */;
 			buildPhases = (
 				88C20C9D209FAC04007D5CF4 /* Sources */,
 				88C20C9E209FAC04007D5CF4 /* Frameworks */,
@@ -289,14 +289,14 @@
 			dependencies = (
 				8871354920CAB70B0068865B /* PBXTargetDependency */,
 			);
-			name = TubeApp;
+			name = LondonUndergroundStatus;
 			productName = TubeApp;
-			productReference = 88C20CA1209FAC04007D5CF4 /* TubeApp.app */;
+			productReference = 88C20CA1209FAC04007D5CF4 /* LondonUndergroundStatus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		88C20CB6209FAC04007D5CF4 /* TubeAppTests */ = {
+		88C20CB6209FAC04007D5CF4 /* LondonUndergroundStatusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88C20CCE209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeAppTests" */;
+			buildConfigurationList = 88C20CCE209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTests" */;
 			buildPhases = (
 				88C20CB3209FAC04007D5CF4 /* Sources */,
 				88C20CB4209FAC04007D5CF4 /* Frameworks */,
@@ -307,14 +307,14 @@
 			dependencies = (
 				88C20CB9209FAC04007D5CF4 /* PBXTargetDependency */,
 			);
-			name = TubeAppTests;
+			name = LondonUndergroundStatusTests;
 			productName = TubeAppTests;
-			productReference = 88C20CB7209FAC04007D5CF4 /* TubeAppTests.xctest */;
+			productReference = 88C20CB7209FAC04007D5CF4 /* LondonUndergroundStatusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		88C20CC1209FAC04007D5CF4 /* TubeAppUITests */ = {
+		88C20CC1209FAC04007D5CF4 /* LondonUndergroundStatusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88C20CD1209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeAppUITests" */;
+			buildConfigurationList = 88C20CD1209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusUITests" */;
 			buildPhases = (
 				88C20CBE209FAC04007D5CF4 /* Sources */,
 				88C20CBF209FAC04007D5CF4 /* Frameworks */,
@@ -325,9 +325,9 @@
 			dependencies = (
 				88C20CC4209FAC04007D5CF4 /* PBXTargetDependency */,
 			);
-			name = TubeAppUITests;
+			name = LondonUndergroundStatusUITests;
 			productName = TubeAppUITests;
-			productReference = 88C20CC2209FAC04007D5CF4 /* TubeAppUITests.xctest */;
+			productReference = 88C20CC2209FAC04007D5CF4 /* LondonUndergroundStatusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -338,7 +338,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = knoxx;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					8871353C20CAB70B0068865B = {
 						CreatedOnToolsVersion = 9.4;
@@ -348,7 +348,7 @@
 					88C20CA0209FAC04007D5CF4 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					88C20CB6209FAC04007D5CF4 = {
 						CreatedOnToolsVersion = 9.2;
@@ -364,7 +364,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "TubeApp" */;
+			buildConfigurationList = 88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "LondonUndergroundStatus" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -377,10 +377,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				88C20CA0209FAC04007D5CF4 /* TubeApp */,
-				88C20CB6209FAC04007D5CF4 /* TubeAppTests */,
-				88C20CC1209FAC04007D5CF4 /* TubeAppUITests */,
-				8871353C20CAB70B0068865B /* TubeAppTodayExtension */,
+				88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */,
+				88C20CB6209FAC04007D5CF4 /* LondonUndergroundStatusTests */,
+				88C20CC1209FAC04007D5CF4 /* LondonUndergroundStatusUITests */,
+				8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -457,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88C20CBC209FAC04007D5CF4 /* TubeAppTests.swift in Sources */,
+				88C20CBC209FAC04007D5CF4 /* LondonUndergroundStatusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88C20CC7209FAC04007D5CF4 /* TubeAppUITests.swift in Sources */,
+				88C20CC7209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,17 +474,17 @@
 /* Begin PBXTargetDependency section */
 		8871354920CAB70B0068865B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8871353C20CAB70B0068865B /* TubeAppTodayExtension */;
+			target = 8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */;
 			targetProxy = 8871354820CAB70B0068865B /* PBXContainerItemProxy */;
 		};
 		88C20CB9209FAC04007D5CF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 88C20CA0209FAC04007D5CF4 /* TubeApp */;
+			target = 88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */;
 			targetProxy = 88C20CB8209FAC04007D5CF4 /* PBXContainerItemProxy */;
 		};
 		88C20CC4209FAC04007D5CF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 88C20CA0209FAC04007D5CF4 /* TubeApp */;
+			target = 88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */;
 			targetProxy = 88C20CC3209FAC04007D5CF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,10 +525,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppTodayExtension/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatusTodayExtension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp.TubeAppTodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -544,10 +544,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppTodayExtension/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatusTodayExtension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp.TubeAppTodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -671,13 +671,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DK34MVSU63;
-				INFOPLIST_FILE = "$(SRCROOT)/TubeApp/Supporting/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6C84G57E3;
+				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatus/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "* Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -688,11 +689,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/TubeApp/Supporting/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6C84G57E3;
+				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatus/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -707,13 +709,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppTests/Info.plist;
+				INFOPLIST_FILE = LondonUndergroundStatusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TubeApp.app/TubeApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LondonUndergroundStatus.app/LondonUndergroundStatus";
 			};
 			name = Debug;
 		};
@@ -724,13 +726,13 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppTests/Info.plist;
+				INFOPLIST_FILE = LondonUndergroundStatusTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TubeApp.app/TubeApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LondonUndergroundStatus.app/LondonUndergroundStatus";
 			};
 			name = Release;
 		};
@@ -740,13 +742,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppUITests/Info.plist;
+				INFOPLIST_FILE = LondonUndergroundStatusUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatusUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TubeApp;
+				TEST_TARGET_NAME = LondonUndergroundStatus;
 			};
 			name = Debug;
 		};
@@ -756,20 +758,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = TubeAppUITests/Info.plist;
+				INFOPLIST_FILE = LondonUndergroundStatusUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.knoxx.TubeAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatusUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TubeApp;
+				TEST_TARGET_NAME = LondonUndergroundStatus;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "TubeAppTodayExtension" */ = {
+		8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTodayExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8871354B20CAB70B0068865B /* Debug */,
@@ -778,7 +780,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "TubeApp" */ = {
+		88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "LondonUndergroundStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88C20CC9209FAC04007D5CF4 /* Debug */,
@@ -787,7 +789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeApp" */ = {
+		88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88C20CCC209FAC04007D5CF4 /* Debug */,
@@ -796,7 +798,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88C20CCE209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeAppTests" */ = {
+		88C20CCE209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88C20CCF209FAC04007D5CF4 /* Debug */,
@@ -805,7 +807,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88C20CD1209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "TubeAppUITests" */ = {
+		88C20CD1209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88C20CD2209FAC04007D5CF4 /* Debug */,
