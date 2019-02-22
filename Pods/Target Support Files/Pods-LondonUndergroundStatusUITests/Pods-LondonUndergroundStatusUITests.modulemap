@@ -1,0 +1,6 @@
+framework module Pods_LondonUndergroundStatusUITests {
+  umbrella header "Pods-LondonUndergroundStatusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

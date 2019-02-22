@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38EE0257BD343702ED2A343C /* Pods_LondonUndergroundStatusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173EC7C5943E2DE7C666B2D1 /* Pods_LondonUndergroundStatusTests.framework */; };
 		74883D48221F635D00513203 /* LineStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74883D47221F635D00513203 /* LineStatusView.xib */; };
 		749383BA2220336E004CC0EF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383B92220336E004CC0EF /* NetworkService.swift */; };
 		749383BB222033DA004CC0EF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383B92220336E004CC0EF /* NetworkService.swift */; };
@@ -33,6 +34,9 @@
 		88C20CD9209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C20CD8209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib */; };
 		88C20CDB209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CDA209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift */; };
 		88F0CE9420C48FD0007B0955 /* LineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F0CE9320C48FD0007B0955 /* LineInfoView.xib */; };
+		8FCC22666B30537722D6190C /* Pods_LondonUndergroundStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */; };
+		E7657F5D5096A02BCC594472 /* Pods_LondonUndergroundStatusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D29777A2B145633A69F3F3 /* Pods_LondonUndergroundStatusUITests.framework */; };
+		F3FE6D48FBCBDC3D2F03479D /* Pods_LondonUndergroundStatusTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68426A15E8F99C6E85C1C680 /* Pods_LondonUndergroundStatusTodayExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +78,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AD7EC6E900C51049F541509 /* Pods-LondonUndergroundStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusTests/Pods-LondonUndergroundStatusTests.release.xcconfig"; sourceTree = "<group>"; };
+		171433262BC3DDF3151530E3 /* Pods-LondonUndergroundStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatus/Pods-LondonUndergroundStatus.release.xcconfig"; sourceTree = "<group>"; };
+		173EC7C5943E2DE7C666B2D1 /* Pods_LondonUndergroundStatusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BAD07C45D133EE7732A9CBA /* Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusTodayExtension/Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		584D0274B03B321224CBDF36 /* Pods-LondonUndergroundStatusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusUITests/Pods-LondonUndergroundStatusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		68426A15E8F99C6E85C1C680 /* Pods_LondonUndergroundStatusTodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatusTodayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74883D47221F635D00513203 /* LineStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineStatusView.xib; sourceTree = "<group>"; };
 		749383B92220336E004CC0EF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		749383BF22204610004CC0EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		749383C2222049D9004CC0EF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		749383C422204B82004CC0EF /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C4525CCB211208D91E968B /* Pods-LondonUndergroundStatusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusUITests/Pods-LondonUndergroundStatusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* LinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +116,10 @@
 		88C20CD8209FCA0A007D5CF4 /* LineStatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineStatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		88C20CDA209FCAFA007D5CF4 /* LineStatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		88F0CE9320C48FD0007B0955 /* LineInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineInfoView.xib; sourceTree = "<group>"; };
+		9A45E8702AEEFD84C8F01903 /* Pods-LondonUndergroundStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatus/Pods-LondonUndergroundStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		B345D80AEFDF48393A5F20AA /* Pods-LondonUndergroundStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusTests/Pods-LondonUndergroundStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCCBD754747C2A2C6F79F2D6 /* Pods-LondonUndergroundStatusTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusTodayExtension/Pods-LondonUndergroundStatusTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
+		C3D29777A2B145633A69F3F3 /* Pods_LondonUndergroundStatusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */,
+				F3FE6D48FBCBDC3D2F03479D /* Pods_LondonUndergroundStatusTodayExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC22666B30537722D6190C /* Pods_LondonUndergroundStatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EE0257BD343702ED2A343C /* Pods_LondonUndergroundStatusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +152,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7657F5D5096A02BCC594472 /* Pods_LondonUndergroundStatusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4198D74E595AC22D768B06C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A45E8702AEEFD84C8F01903 /* Pods-LondonUndergroundStatus.debug.xcconfig */,
+				171433262BC3DDF3151530E3 /* Pods-LondonUndergroundStatus.release.xcconfig */,
+				B345D80AEFDF48393A5F20AA /* Pods-LondonUndergroundStatusTests.debug.xcconfig */,
+				0AD7EC6E900C51049F541509 /* Pods-LondonUndergroundStatusTests.release.xcconfig */,
+				4BAD07C45D133EE7732A9CBA /* Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig */,
+				BCCBD754747C2A2C6F79F2D6 /* Pods-LondonUndergroundStatusTodayExtension.release.xcconfig */,
+				86C4525CCB211208D91E968B /* Pods-LondonUndergroundStatusUITests.debug.xcconfig */,
+				584D0274B03B321224CBDF36 /* Pods-LondonUndergroundStatusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		749383C122204740004CC0EF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				8871353F20CAB70B0068865B /* NotificationCenter.framework */,
+				7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */,
+				173EC7C5943E2DE7C666B2D1 /* Pods_LondonUndergroundStatusTests.framework */,
+				68426A15E8F99C6E85C1C680 /* Pods_LondonUndergroundStatusTodayExtension.framework */,
+				C3D29777A2B145633A69F3F3 /* Pods_LondonUndergroundStatusUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +246,7 @@
 				8871354120CAB70B0068865B /* LondonUndergroundStatusTodayExtension */,
 				8871353E20CAB70B0068865B /* Frameworks */,
 				88C20CA2209FAC04007D5CF4 /* Products */,
+				4198D74E595AC22D768B06C8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTodayExtension" */;
 			buildPhases = (
+				FB32DA8FF2BD2AA0EC8FAFA0 /* [CP] Check Pods Manifest.lock */,
 				8871353920CAB70B0068865B /* Sources */,
 				8871353A20CAB70B0068865B /* Frameworks */,
 				8871353B20CAB70B0068865B /* Resources */,
@@ -279,10 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatus" */;
 			buildPhases = (
+				3CB91F95C790435AD2249BD0 /* [CP] Check Pods Manifest.lock */,
 				88C20C9D209FAC04007D5CF4 /* Sources */,
 				88C20C9E209FAC04007D5CF4 /* Frameworks */,
 				88C20C9F209FAC04007D5CF4 /* Resources */,
 				8871354E20CAB70B0068865B /* Embed App Extensions */,
+				E7F75F812DE6E699A746F086 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +341,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C20CCE209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTests" */;
 			buildPhases = (
+				6C0A87D3BB831DB62DAA7020 /* [CP] Check Pods Manifest.lock */,
 				88C20CB3209FAC04007D5CF4 /* Sources */,
 				88C20CB4209FAC04007D5CF4 /* Frameworks */,
 				88C20CB5209FAC04007D5CF4 /* Resources */,
@@ -316,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C20CD1209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusUITests" */;
 			buildPhases = (
+				B899A7E6DBE8CA2F4C7FA03C /* [CP] Check Pods Manifest.lock */,
 				88C20CBE209FAC04007D5CF4 /* Sources */,
 				88C20CBF209FAC04007D5CF4 /* Frameworks */,
 				88C20CC0209FAC04007D5CF4 /* Resources */,
@@ -423,6 +468,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CB91F95C790435AD2249BD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LondonUndergroundStatus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C0A87D3BB831DB62DAA7020 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LondonUndergroundStatusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B899A7E6DBE8CA2F4C7FA03C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LondonUndergroundStatusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F75F812DE6E699A746F086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LondonUndergroundStatus/Pods-LondonUndergroundStatus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LondonUndergroundStatus/Pods-LondonUndergroundStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB32DA8FF2BD2AA0EC8FAFA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LondonUndergroundStatusTodayExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8871353920CAB70B0068865B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -519,6 +679,7 @@
 /* Begin XCBuildConfiguration section */
 		8871354B20CAB70B0068865B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BAD07C45D133EE7732A9CBA /* Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -538,6 +699,7 @@
 		};
 		8871354C20CAB70B0068865B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCBD754747C2A2C6F79F2D6 /* Pods-LondonUndergroundStatusTodayExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -668,6 +830,7 @@
 		};
 		88C20CCC209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A45E8702AEEFD84C8F01903 /* Pods-LondonUndergroundStatus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -686,6 +849,7 @@
 		};
 		88C20CCD209FAC04007D5CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171433262BC3DDF3151530E3 /* Pods-LondonUndergroundStatus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -704,6 +868,7 @@
 		};
 		88C20CCF209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B345D80AEFDF48393A5F20AA /* Pods-LondonUndergroundStatusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -721,6 +886,7 @@
 		};
 		88C20CD0209FAC04007D5CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AD7EC6E900C51049F541509 /* Pods-LondonUndergroundStatusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,6 +904,7 @@
 		};
 		88C20CD2209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C4525CCB211208D91E968B /* Pods-LondonUndergroundStatusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -754,6 +921,7 @@
 		};
 		88C20CD3209FAC04007D5CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 584D0274B03B321224CBDF36 /* Pods-LondonUndergroundStatusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
