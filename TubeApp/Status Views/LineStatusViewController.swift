@@ -45,9 +45,6 @@ class LineStatusViewController: UIViewController {
         collectionViewFlowLayout?.minimumLineSpacing = 0
         collectionViewFlowLayout?.minimumInteritemSpacing = 0
 
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(changeLineOrder(gesture:)))
-        tubeLineCollectionView?.addGestureRecognizer(longPressGesture)
-
         let savedState = readSavedLineState()
         self.currentLineStatus = savedState?.lineStatus
         self.lastUpdatedTime = savedState?.lastUpdatedTimestamp
@@ -73,7 +70,6 @@ class LineStatusViewController: UIViewController {
     }
     
     @objc func reloadStatus() {
-        tubeLineCollectionView?.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
         networkService.update(completion: { (status, updateTime) in
 
             guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
@@ -88,8 +84,6 @@ class LineStatusViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tubeLineCollectionView?.reloadData()
                 self.tubeLineCollectionView?.refreshControl?.endRefreshing()
-                let lastUpdatedString = String(.lastUpdated).replacingOccurrences(of: "{time}", with: updateTime)
-                self.tubeLineCollectionView?.refreshControl?.attributedTitle = NSAttributedString(string:"Last Updated: \(updateTime)")
             }
         })
     }
@@ -108,24 +102,6 @@ class LineStatusViewController: UIViewController {
         return NSKeyedUnarchiver.unarchiveObject(with: encodedObject) as? LinesState
     }
 
-    @objc func changeLineOrder(gesture: UILongPressGestureRecognizer) {
-
-        switch gesture.state {
-        case .began:
-
-            guard let selectedPath = tubeLineCollectionView?.indexPathForItem(at: gesture.location(in: tubeLineCollectionView)) else {
-                break
-            }
-
-            tubeLineCollectionView?.beginInteractiveMovementForItem(at: selectedPath)
-        case .changed:
-            tubeLineCollectionView?.updateInteractiveMovementTargetPosition(gesture.location(in: tubeLineCollectionView))
-        case .ended:
-            tubeLineCollectionView?.endInteractiveMovement()
-        default:
-            tubeLineCollectionView?.cancelInteractiveMovement()
-        }
-    }
 
     func sortedLineArray(_ unsortedStatus: [Line]?) -> [Line]? {
         guard let currentSortedStatus = currentLineStatus else {
@@ -163,7 +139,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? LineStatusCollectionViewCell
         cell?.lineNameLabel?.attributedText = NSAttributedString(string: line.name)
         cell?.lineStatusLabel?.text = line.status
-        cell?.lineStatusIcon?.image = line.status == "Good Service" ? UIImage(named: "GoodService") : UIImage(named: "Warning")
+        cell?.lineStatusIcon?.image = line.status == String(.goodService) ? UIImage(named: "GoodService") : UIImage(named: "Warning")
         cell?.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
         
         return cell ?? UICollectionViewCell()
@@ -196,5 +172,28 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
         if let currentState = currentLineStatus, let timestamp = lastUpdatedTime {
             save(linesState: currentState, forTimestamp: timestamp)
         }
+    }
+}
+
+extension LineStatusViewController {
+
+    @IBAction func editLineOrder(_ sender: UILongPressGestureRecognizer) {
+
+        switch sender.state {
+        case .began:
+            let location = sender.location(in: tubeLineCollectionView)
+            guard let selectedPath = tubeLineCollectionView?.indexPathForItem(at: location) else {
+                break
+            }
+            tubeLineCollectionView?.beginInteractiveMovementForItem(at: selectedPath)
+        case .changed:
+           let location = sender.location(in: tubeLineCollectionView)
+           tubeLineCollectionView?.updateInteractiveMovementTargetPosition(location)
+        case .ended:
+            tubeLineCollectionView?.endInteractiveMovement()
+        default:
+            tubeLineCollectionView?.cancelInteractiveMovement()
+        }
+
     }
 }

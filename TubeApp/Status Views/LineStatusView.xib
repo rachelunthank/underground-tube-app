@@ -42,6 +42,14 @@
                 <constraint firstItem="EYI-6e-wfI" firstAttribute="top" secondItem="7UY-qd-wJJ" secondAttribute="top" id="geJ-H7-VO0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="9gn-d1-5o9"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="FMm-JX-b2J" appends="YES" id="0tc-N8-KK0"/>
+            </connections>
         </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="FMm-JX-b2J">
+            <connections>
+                <action selector="editLineOrder:" destination="-1" id="BCI-ku-BhD"/>
+            </connections>
+        </pongPressGestureRecognizer>
     </objects>
 </document>
