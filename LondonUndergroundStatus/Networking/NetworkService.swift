@@ -5,5 +5,5 @@
 import Foundation
 
 protocol NetworkService {
-    func update(completion: @escaping ([Line]?, Date?) -> Void)
+    func update(completion: @escaping ([Line]?) -> Void)
 }

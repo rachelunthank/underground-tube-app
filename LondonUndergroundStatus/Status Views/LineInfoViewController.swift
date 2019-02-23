@@ -7,7 +7,7 @@ import UIKit
 
 public class LineInfoViewController: UIViewController {
 
-    let line: Line
+    let line: LineState
 
     @IBOutlet var lineInfoView: UIView! {
         didSet {
@@ -18,9 +18,9 @@ public class LineInfoViewController: UIViewController {
     @IBOutlet var lineStatusIconImageView: UIImageView!
     @IBOutlet var lineStatusDescriptionLabel: UILabel!
 
-    init(line: Line) {
+    init(line: LineState) {
         self.line = line
-        super.init(nibName: "LineInfoView", bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -31,12 +31,12 @@ public class LineInfoViewController: UIViewController {
 
         lineInfoView.backgroundColor = TubeLineColors(rawValue: line.identifier)?.value
         lineTitleLabel?.text = line.name
-        let status = line.lineStatuses.first?.statusSeverityDescription
+        let status = line.serviceStatus
         let goodService = status == "Good Service"
 
         lineStatusIconImageView.image = goodService ? UIImage(named: "GoodService") : UIImage(named: "Warning")
 
-        lineStatusDescriptionLabel.text = goodService ? String(.goodService) : line.lineStatuses.first?.reason
+        lineStatusDescriptionLabel.text = goodService ? String(.goodService) : line.disruptionDescription
 
         lineStatusDescriptionLabel.sizeToFit()
     }

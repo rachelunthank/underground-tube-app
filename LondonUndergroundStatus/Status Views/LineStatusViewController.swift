@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LineStatusViewController: UIViewController {
 
@@ -11,13 +12,19 @@ class LineStatusViewController: UIViewController {
 
     let cellIdentifier = "tubeLineCellIdentifier"
 
-    var currentLineStatus: [Line]?
-    var lastUpdatedTime: Date?
+    var latestLineStates: List<LineState>?
+    var lastUpdated: Date?
 
     let networkService: NetworkService
+    let storageService: StorageInteractor
 
-    init(service: NetworkService) {
+    var lineOrder: [String]? {
+        return UserDefaults.standard.object(forKey: "lineOrder") as? [String]
+    }
+
+    init(service: NetworkService, storage: StorageInteractor) {
         self.networkService = service
+        self.storageService = storage
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -45,10 +52,10 @@ class LineStatusViewController: UIViewController {
         collectionViewFlowLayout?.minimumLineSpacing = 0
         collectionViewFlowLayout?.minimumInteritemSpacing = 0
 
-        if let savedState = readSavedLineState() {
-            self.currentLineStatus = savedState.lineStatus
-            self.lastUpdatedTime = savedState.lastUpdatedTimestamp
-        }
+        if let savedState = storageService.readFromStorage() {
+            self.latestLineStates = savedState.lineStates
+            self.lastUpdated = savedState.lastUpdated
+       }
 
         fetchUpdateFromNetwork(completion: nil)
     }
@@ -56,61 +63,36 @@ class LineStatusViewController: UIViewController {
     @objc func reloadStatus() {
 
         fetchUpdateFromNetwork(completion: {
-            self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+
+            DispatchQueue.main.async {
+                self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+            }
         })
     }
 
     func fetchUpdateFromNetwork(completion: (() -> Void)?) {
 
-        networkService.update(completion: { (status, updateTime) in
+        networkService.update(completion: { (lines) in
 
-            guard let updatedStatus = self.sortedLineArray(status), let updateTime = updateTime else {
-                print("Status update returned empty status / timestamp")
+            guard let lineStates = lines else {
+                completion?()
                 return
             }
-
-            self.currentLineStatus = updatedStatus
-            self.lastUpdatedTime = updateTime
-            self.save(linesState: updatedStatus, forTimestamp: updateTime)
+            self.storageService.saveToStorage(lines: lineStates,
+                                              lastUpdated: Date())
 
             DispatchQueue.main.async {
+
+                if let savedState = self.storageService.readFromStorage() {
+                    self.latestLineStates = savedState.lineStates
+                    self.lastUpdated = savedState.lastUpdated
+                }
+
                 self.tubeLineCollectionView?.reloadData()
                 completion?()
             }
         })
 
-    }
-
-    func save(linesState state: [Line], forTimestamp lastUpdated: Date) {
-        let saveState = LinesState(withStatus: state, timestamp: lastUpdated)
-        let encodedObject = NSKeyedArchiver.archivedData(withRootObject: saveState)
-        UserDefaults.standard.set(encodedObject, forKey: "savedState")
-        UserDefaults.standard.synchronize()
-    }
-
-    func readSavedLineState() -> LinesState? {
-        guard let encodedObject = UserDefaults.standard.object(forKey: "savedState") as? Data else {
-            return nil
-        }
-        return NSKeyedUnarchiver.unarchiveObject(with: encodedObject) as? LinesState
-    }
-
-    func sortedLineArray(_ unsortedStatus: [Line]?) -> [Line]? {
-        guard let currentSortedStatus = currentLineStatus else {
-            return unsortedStatus
-        }
-
-        let lineOrder = currentSortedStatus.map { $0.name }
-
-        var sortedArray = [Line]()
-
-        for line in lineOrder {
-            if let lineinfo = unsortedStatus?.first(where: { $0.name == line }) {
-                sortedArray.append(lineinfo)
-            }
-        }
-
-        return sortedArray
     }
 }
 
@@ -118,20 +100,21 @@ class LineStatusViewController: UIViewController {
 extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return currentLineStatus?.count ?? 0
+        return latestLineStates?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        guard let line = currentLineStatus?[indexPath.row] else {
+        guard let lineIdentifier = lineOrder?[indexPath.row],
+            let line = latestLineStates?.first(where: { $0.identifier == lineIdentifier }) else {
             return UICollectionViewCell()
         }
 
         let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
                                                                for: indexPath) as? LineStatusCollectionViewCell
         cell?.lineNameLabel?.attributedText = NSAttributedString(string: line.name)
-        let status = line.lineStatuses.first?.statusSeverityDescription
+        let status = line.serviceStatus
 
         cell?.lineStatusLabel?.text = status
         let goodStatus = status == "Good Service"
@@ -143,7 +126,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        guard let line = currentLineStatus?[indexPath.row] else {
+        guard let line = latestLineStates?[indexPath.row] else {
             return
         }
 
@@ -154,6 +137,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+
         return true
     }
 
@@ -161,15 +145,11 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
                         moveItemAt sourceIndexPath: IndexPath,
                         to destinationIndexPath: IndexPath) {
 
-        guard let movedLine = currentLineStatus?.remove(at: sourceIndexPath.row) else {
-            return
-        }
+        var newLineOrder = lineOrder
+        guard let movedLine = newLineOrder?.remove(at: sourceIndexPath.row) else { return }
+        newLineOrder?.insert(movedLine, at: destinationIndexPath.row)
 
-        currentLineStatus?.insert(movedLine, at: destinationIndexPath.row)
-
-        if let currentState = currentLineStatus, let timestamp = lastUpdatedTime {
-            save(linesState: currentState, forTimestamp: timestamp)
-        }
+        UserDefaults.standard.set(newLineOrder, forKey: "lineOrder")
     }
 }
 
@@ -193,6 +173,5 @@ extension LineStatusViewController {
         default:
             tubeLineCollectionView?.cancelInteractiveMovement()
         }
-
     }
 }
