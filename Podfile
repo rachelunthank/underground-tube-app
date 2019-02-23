@@ -7,6 +7,7 @@ target 'LondonUndergroundStatus' do
 
   # Pods for LondonUndergroundStatus
   pod 'RealmSwift'
+  pod 'SwiftLint'
 
   target 'LondonUndergroundStatusTests' do
     inherit! :search_paths
