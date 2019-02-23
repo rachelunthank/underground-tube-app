@@ -29,10 +29,15 @@ public class LineInfoViewController: UIViewController {
 
     public override func viewDidLoad() {
 
-        lineInfoView.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
+        lineInfoView.backgroundColor = TubeLineColors(rawValue: line.identifier)?.value
         lineTitleLabel?.text = line.name
-        lineStatusIconImageView.image = line.status == "Good Service" ? UIImage(named: "GoodService") : UIImage(named: "Warning")
-        lineStatusDescriptionLabel.text = line.status == "Good Service" ? line.status : line.disruptionDescription
+        let status = line.lineStatuses.first?.statusSeverityDescription
+        let goodService = status == "Good Service"
+
+        lineStatusIconImageView.image = goodService ? UIImage(named: "GoodService") : UIImage(named: "Warning")
+
+        lineStatusDescriptionLabel.text = goodService ? String(.goodService) : line.lineStatuses.first?.reason
+
         lineStatusDescriptionLabel.sizeToFit()
     }
 

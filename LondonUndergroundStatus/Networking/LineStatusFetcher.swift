@@ -16,37 +16,14 @@ class LineStatusFetcher: NetworkService {
         }
 
         URLSession.shared.dataTask(with: apiUrl, completionHandler: { (data, response, error) in
-            do {
-                if let statusData = data {
-                    let json = try JSONSerialization.jsonObject(with: statusData, options: [])
-                    if let jsonObjects = json as? [AnyObject] {
-                        let status = self.updateCurrentStatus(with: jsonObjects)
-                        completion(status, Date())
-                    }
-                }
-            } catch {
-                
+            if error != nil {
+                // handle network error
+                print(response.debugDescription)
+            }
+            if let statusData = data {
+                guard let lines = try? JSONDecoder().decode([Line].self, from: statusData) else { return }
+                completion(lines, Date())
             }
         }).resume()
-    }
-    
-    private func updateCurrentStatus(with json: [AnyObject]) -> [Line] {
-
-        var tubeLineStatus = [Line]()
-
-        for line in json {
-
-            let lineStatus = (line["lineStatuses"] as! [AnyObject])[0]
-            let statusDescription = lineStatus["reason"] as? String
-
-            guard let name = line["name"] as? String, let status = lineStatus["statusSeverityDescription"] as? String else {
-                continue
-            }
-
-            let newLine = Line(name: name, status: status, disruptionDescription: statusDescription)
-            tubeLineStatus.append(newLine)
-        }
-
-        return tubeLineStatus
     }
 }

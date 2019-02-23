@@ -4,41 +4,74 @@
 
 import Foundation
 
-struct LineProperties {
-    static let name = "name"
-    static let status = "status"
-    static let disruptionDescription = "disruptionDescription"
+struct Line: Codable {
+    let type, identifier, name, modeName: String
+    let disruptions: [String?]
+    let created, modified: String
+    let lineStatuses: [LineStatus]
+    let routeSections: [String?]
+    let serviceTypes: [ServiceType]
+    let crowding: Crowding
+
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case identifier = "id"
+        case name, modeName, disruptions, created, modified, lineStatuses, routeSections, serviceTypes, crowding
+    }
 }
 
-public class Line: NSObject, NSCoding {
+struct Crowding: Codable {
+    let type: String
 
-    var name: String
-    var status: String
-    var disruptionDescription: String?
-
-    init(name: String, status: String, disruptionDescription: String?) {
-        self.name = name
-        self.status = status
-        self.disruptionDescription = disruptionDescription
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
     }
+}
 
-    public required init?(coder aDecoder: NSCoder) {
+struct LineStatus: Codable {
+    let type: String
+    let identifier, statusSeverity: Int
+    let statusSeverityDescription, created: String
+    let validityPeriods: [ValidityPeriod]
+    let lineId, reason: String?
+    let disruption: Disruption?
 
-        guard let name = aDecoder.decodeObject(forKey: LineProperties.name) as? String,
-            let status = aDecoder.decodeObject(forKey: LineProperties.status) as? String else {
-
-                print("Unable to decode name / status of Line object")
-                return nil
-        }
-
-        self.name = name
-        self.status = status
-        self.disruptionDescription = aDecoder.decodeObject(forKey: LineProperties.disruptionDescription) as? String
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case identifier = "id"
+        case statusSeverity, statusSeverityDescription, created, validityPeriods, lineId, reason, disruption
     }
+}
 
-    public func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: LineProperties.name)
-        aCoder.encode(status, forKey: LineProperties.status)
-        aCoder.encode(disruptionDescription, forKey: LineProperties.disruptionDescription)
+struct Disruption: Codable {
+    let type, category, categoryDescription, description, created: String
+    let affectedRoutes, affectedStops: [String?]
+    let closureText: String
+    let additionalInfo: String?
+
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case category, categoryDescription, description
+        case additionalInfo, created, affectedRoutes, affectedStops, closureText
+    }
+}
+
+struct ValidityPeriod: Codable {
+    let type: String
+    let fromDate, toDate: String
+    let isNow: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case fromDate, toDate, isNow
+    }
+}
+
+struct ServiceType: Codable {
+    let type, name, uri: String
+
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case name, uri
     }
 }

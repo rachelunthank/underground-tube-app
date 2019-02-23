@@ -49,10 +49,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     func getLinesWithBadStatus(_ lines: [Line]) -> [String] {
         var disruptedLineNames = [String]()
-        for line in lines {
-            if line.status != "Good Service" {
-                disruptedLineNames.append(line.name)
-            }
+        for line in lines where line.lineStatuses.first?.reason != "Good Service" {
+            disruptedLineNames.append(line.name)
         }
         return disruptedLineNames
     }

@@ -131,9 +131,12 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
                                                                for: indexPath) as? LineStatusCollectionViewCell
         cell?.lineNameLabel?.attributedText = NSAttributedString(string: line.name)
-        cell?.lineStatusLabel?.text = line.status
-        cell?.lineStatusIcon?.image = line.status == String(.goodService) ? UIImage(named: "GoodService") : UIImage(named: "Warning")
-        cell?.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
+        let status = line.lineStatuses.first?.statusSeverityDescription
+
+        cell?.lineStatusLabel?.text = status
+        let goodStatus = status == "Good Service"
+        cell?.lineStatusIcon?.image = goodStatus ? UIImage(named: "GoodService") : UIImage(named: "Warning")
+        cell?.backgroundColor = TubeLineColors(rawValue: line.identifier)?.value
 
         return cell ?? UICollectionViewCell()
     }

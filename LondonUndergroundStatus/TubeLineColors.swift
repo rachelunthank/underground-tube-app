@@ -10,18 +10,18 @@ public enum TubeLineColors: String {
     case central
     case circle
     case district
-    case hammersmith = "hammersmith & city"
+    case hammersmith = "hammersmith-city"
     case jubilee
     case metropolitan
     case northern
     case piccadilly
     case victoria
-    case waterloo = "waterloo & city"
-    case overground = "london overground"
+    case waterloo = "waterloo-city"
+    case overground = "london-overground"
     case dlr
     case tram
-    case tfl = "tfl rail"
-    case emirates = "emirates air line"
+    case tfl = "tfl-rail"
+    case emirates = "emirates-air-line"
 
     var value: UIColor {
         switch self {
