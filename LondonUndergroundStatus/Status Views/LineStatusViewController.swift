@@ -5,7 +5,7 @@
 import UIKit
 
 class LineStatusViewController: UIViewController {
-    
+
     @IBOutlet var tubeLineCollectionView: UICollectionView?
     @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout?
 
@@ -27,19 +27,19 @@ class LineStatusViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.title = NSLocalizedString("live.status", comment: "")
-        
+
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(reloadStatus), for: .valueChanged)
         tubeLineCollectionView?.refreshControl = refreshControl
-        
+
         let collectionViewNib = UINib(nibName: "LineStatusCollectionViewCell", bundle: nil)
         tubeLineCollectionView?.register(collectionViewNib, forCellWithReuseIdentifier: cellIdentifier)
-        
+
         tubeLineCollectionView?.delegate = self
         tubeLineCollectionView?.dataSource = self
-        
+
         let cellSize = UIScreen.main.bounds.width / 3
         collectionViewFlowLayout?.itemSize = CGSize(width: cellSize, height: cellSize)
         collectionViewFlowLayout?.minimumLineSpacing = 0
@@ -52,7 +52,7 @@ class LineStatusViewController: UIViewController {
 
         fetchUpdateFromNetwork(completion: nil)
     }
-    
+
     @objc func reloadStatus() {
 
         fetchUpdateFromNetwork(completion: {
@@ -95,7 +95,6 @@ class LineStatusViewController: UIViewController {
         return NSKeyedUnarchiver.unarchiveObject(with: encodedObject) as? LinesState
     }
 
-
     func sortedLineArray(_ unsortedStatus: [Line]?) -> [Line]? {
         guard let currentSortedStatus = currentLineStatus else {
             return unsortedStatus
@@ -113,7 +112,6 @@ class LineStatusViewController: UIViewController {
 
         return sortedArray
     }
-
 }
 
 // MARK: - Collection view delegate
@@ -122,19 +120,21 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentLineStatus?.count ?? 0
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         guard let line = currentLineStatus?[indexPath.row] else {
             return UICollectionViewCell()
         }
-        
-        let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? LineStatusCollectionViewCell
+
+        let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
+                                                               for: indexPath) as? LineStatusCollectionViewCell
         cell?.lineNameLabel?.attributedText = NSAttributedString(string: line.name)
         cell?.lineStatusLabel?.text = line.status
         cell?.lineStatusIcon?.image = line.status == String(.goodService) ? UIImage(named: "GoodService") : UIImage(named: "Warning")
         cell?.backgroundColor = TubeLineColors(rawValue: line.name.lowercased())?.value
-        
+
         return cell ?? UICollectionViewCell()
     }
 
@@ -154,7 +154,9 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
         return true
     }
 
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        moveItemAt sourceIndexPath: IndexPath,
+                        to destinationIndexPath: IndexPath) {
 
         guard let movedLine = currentLineStatus?.remove(at: sourceIndexPath.row) else {
             return

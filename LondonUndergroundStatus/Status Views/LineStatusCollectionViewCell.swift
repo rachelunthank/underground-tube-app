@@ -6,9 +6,9 @@ import Foundation
 import UIKit
 
 public class LineStatusCollectionViewCell: UICollectionViewCell {
-    
+
     @IBOutlet var lineNameLabel: UILabel?
     @IBOutlet var lineStatusIcon: UIImageView?
     @IBOutlet var lineStatusLabel: UILabel?
-    
+
 }
