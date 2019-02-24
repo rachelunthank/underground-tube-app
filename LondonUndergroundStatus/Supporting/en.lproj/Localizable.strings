@@ -4,4 +4,4 @@
 
 "good.service" = "Good Service";
 "live.status" = "Live Status";
-"last.updated" = "Last Updated: {time}";
+"last.updated" = "Updated {time}";

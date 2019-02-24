@@ -15,6 +15,7 @@
 		749383C522204B82004CC0EF /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383C422204B82004CC0EF /* LocalizedStrings.swift */; };
 		749383CC22215EBD004CC0EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 749383CB22215EBD004CC0EF /* Localizable.strings */; };
 		749383CE222186B5004CC0EF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383CD222186B5004CC0EF /* StorageManager.swift */; };
+		749383D22221EDD9004CC0EF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383D12221EDD9004CC0EF /* Date+Extensions.swift */; };
 		883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		883CCDF220C2FE21008A2DA1 /* TubeLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF120C2FE21008A2DA1 /* TubeLinesState.swift */; };
 		883CCDF420C35679008A2DA1 /* LineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */; };
@@ -90,6 +91,7 @@
 		749383C422204B82004CC0EF /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		749383CB22215EBD004CC0EF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		749383CD222186B5004CC0EF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		749383D12221EDD9004CC0EF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C4525CCB211208D91E968B /* Pods-LondonUndergroundStatusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusUITests/Pods-LondonUndergroundStatusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				749383C2222049D9004CC0EF /* String+Extensions.swift */,
+				749383D12221EDD9004CC0EF /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				749383C3222049D9004CC0EF /* String+Extensions.swift in Sources */,
 				88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */,
 				883CCDF220C2FE21008A2DA1 /* TubeLinesState.swift in Sources */,
+				749383D22221EDD9004CC0EF /* Date+Extensions.swift in Sources */,
 				749383CE222186B5004CC0EF /* StorageManager.swift in Sources */,
 				88C20CD7209FB31B007D5CF4 /* LineStatusFetcher.swift in Sources */,
 				88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */,

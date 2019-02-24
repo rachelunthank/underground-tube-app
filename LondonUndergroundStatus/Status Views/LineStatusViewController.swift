@@ -7,13 +7,20 @@ import RealmSwift
 
 class LineStatusViewController: UIViewController {
 
-    @IBOutlet var tubeLineCollectionView: UICollectionView?
-    @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout?
+    @IBOutlet var tubeLineCollectionView: UICollectionView!
+    @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet var statusToolbar: UIToolbar!
+
+    var lastUpdatedToolbarItem: UIBarButtonItem?
 
     let cellIdentifier = "tubeLineCellIdentifier"
 
     var latestLineStates: List<LineState>?
-    var lastUpdated: Date?
+    var lastUpdated: Date? {
+        didSet {
+            updateLastUpdatedToolbar(with: lastUpdated)
+        }
+    }
 
     let networkService: NetworkService
     let storageService: StorageInteractor
@@ -39,18 +46,20 @@ class LineStatusViewController: UIViewController {
 
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(reloadStatus), for: .valueChanged)
-        tubeLineCollectionView?.refreshControl = refreshControl
+        tubeLineCollectionView.refreshControl = refreshControl
+
+        configureToolbar()
 
         let collectionViewNib = UINib(nibName: "LineStatusCollectionViewCell", bundle: nil)
-        tubeLineCollectionView?.register(collectionViewNib, forCellWithReuseIdentifier: cellIdentifier)
+        tubeLineCollectionView.register(collectionViewNib, forCellWithReuseIdentifier: cellIdentifier)
 
-        tubeLineCollectionView?.delegate = self
-        tubeLineCollectionView?.dataSource = self
+        tubeLineCollectionView.delegate = self
+        tubeLineCollectionView.dataSource = self
 
         let cellSize = UIScreen.main.bounds.width / 3
-        collectionViewFlowLayout?.itemSize = CGSize(width: cellSize, height: cellSize)
-        collectionViewFlowLayout?.minimumLineSpacing = 0
-        collectionViewFlowLayout?.minimumInteritemSpacing = 0
+        collectionViewFlowLayout.itemSize = CGSize(width: cellSize, height: cellSize)
+        collectionViewFlowLayout.minimumLineSpacing = 0
+        collectionViewFlowLayout.minimumInteritemSpacing = 0
 
         if let savedState = storageService.readFromStorage() {
             self.latestLineStates = savedState.lineStates
@@ -65,7 +74,7 @@ class LineStatusViewController: UIViewController {
         fetchUpdateFromNetwork(completion: {
 
             DispatchQueue.main.async {
-                self.tubeLineCollectionView?.refreshControl?.endRefreshing()
+                self.tubeLineCollectionView.refreshControl?.endRefreshing()
             }
         })
     }
@@ -88,7 +97,7 @@ class LineStatusViewController: UIViewController {
                     self.lastUpdated = savedState.lastUpdated
                 }
 
-                self.tubeLineCollectionView?.reloadData()
+                self.tubeLineCollectionView.reloadData()
                 completion?()
             }
         })
@@ -111,7 +120,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
             return UICollectionViewCell()
         }
 
-        let cell = tubeLineCollectionView?.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
+        let cell = tubeLineCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier,
                                                                for: indexPath) as? LineStatusCollectionViewCell
         cell?.lineNameLabel?.attributedText = NSAttributedString(string: line.name)
         let status = line.serviceStatus
@@ -126,8 +135,9 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        guard let line = latestLineStates?[indexPath.row] else {
-            return
+        guard let lineIdentifier = lineOrder?[indexPath.row],
+            let line = latestLineStates?.first(where: { $0.identifier == lineIdentifier }) else {
+                return
         }
 
         let lineInfoViewController = LineInfoViewController(line: line)
@@ -161,17 +171,43 @@ extension LineStatusViewController {
         switch sender.state {
         case .began:
             let location = sender.location(in: tubeLineCollectionView)
-            guard let selectedPath = tubeLineCollectionView?.indexPathForItem(at: location) else {
+            guard let selectedPath = tubeLineCollectionView.indexPathForItem(at: location) else {
                 break
             }
-            tubeLineCollectionView?.beginInteractiveMovementForItem(at: selectedPath)
+            tubeLineCollectionView.beginInteractiveMovementForItem(at: selectedPath)
         case .changed:
            let location = sender.location(in: tubeLineCollectionView)
-           tubeLineCollectionView?.updateInteractiveMovementTargetPosition(location)
+           tubeLineCollectionView.updateInteractiveMovementTargetPosition(location)
         case .ended:
-            tubeLineCollectionView?.endInteractiveMovement()
+            tubeLineCollectionView.endInteractiveMovement()
         default:
-            tubeLineCollectionView?.cancelInteractiveMovement()
+            tubeLineCollectionView.cancelInteractiveMovement()
         }
+    }
+}
+
+extension LineStatusViewController {
+
+    func configureToolbar() {
+
+        lastUpdatedToolbarItem = UIBarButtonItem(title: String(.lastUpdated),
+                                                 style: .plain,
+                                                 target: nil,
+                                                 action: nil)
+        lastUpdatedToolbarItem?.tintColor = UIColor.black
+
+        let spacingButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                                target: nil,
+                                                action: nil)
+
+        guard let toolbarItem = lastUpdatedToolbarItem else { return }
+
+        statusToolbar.items = [spacingButtonItem, toolbarItem, spacingButtonItem]
+    }
+
+    func updateLastUpdatedToolbar(with lastUpdated: Date?) {
+
+        guard let lastUpdatedString = lastUpdated?.timeElapsedSinceDate() else { return }
+        lastUpdatedToolbarItem?.title = lastUpdatedString
     }
 }

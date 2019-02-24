@@ -10,9 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineStatusViewController" customModule="TubeApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineStatusViewController" customModule="LondonUndergroundStatus" customModuleProvider="target">
             <connections>
                 <outlet property="collectionViewFlowLayout" destination="xAX-mC-Rbi" id="YEe-F6-Mtt"/>
+                <outlet property="statusToolbar" destination="s6f-KL-Un2" id="3zv-t4-8Iy"/>
                 <outlet property="tubeLineCollectionView" destination="EYI-6e-wfI" id="dwT-mt-48T"/>
                 <outlet property="view" destination="7UY-qd-wJJ" id="0SE-z9-s2T"/>
             </connections>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EYI-6e-wfI" userLabel="Tube Line Collection View">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xAX-mC-Rbi">
                         <size key="itemSize" width="50" height="50"/>
@@ -33,12 +34,19 @@
                     </collectionViewFlowLayout>
                     <cells/>
                 </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-KL-Un2">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items/>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="EYI-6e-wfI" firstAttribute="leading" secondItem="9gn-d1-5o9" secondAttribute="leading" id="253-83-OBb"/>
-                <constraint firstItem="EYI-6e-wfI" firstAttribute="bottom" secondItem="9gn-d1-5o9" secondAttribute="bottom" id="GL0-k8-HxI"/>
+                <constraint firstItem="s6f-KL-Un2" firstAttribute="leading" secondItem="7UY-qd-wJJ" secondAttribute="leading" id="FxM-9N-Adf"/>
+                <constraint firstItem="EYI-6e-wfI" firstAttribute="bottom" secondItem="s6f-KL-Un2" secondAttribute="top" id="GL0-k8-HxI"/>
                 <constraint firstItem="EYI-6e-wfI" firstAttribute="trailing" secondItem="9gn-d1-5o9" secondAttribute="trailing" id="Hco-TR-ghm"/>
+                <constraint firstItem="9gn-d1-5o9" firstAttribute="trailing" secondItem="s6f-KL-Un2" secondAttribute="trailing" id="WSp-FO-cP3"/>
+                <constraint firstItem="9gn-d1-5o9" firstAttribute="bottom" secondItem="s6f-KL-Un2" secondAttribute="bottom" id="c0v-JE-bMv"/>
                 <constraint firstItem="EYI-6e-wfI" firstAttribute="top" secondItem="7UY-qd-wJJ" secondAttribute="top" id="geJ-H7-VO0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="9gn-d1-5o9"/>
