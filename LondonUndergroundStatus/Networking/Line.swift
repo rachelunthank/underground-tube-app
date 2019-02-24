@@ -44,7 +44,8 @@ struct LineStatus: Codable {
 }
 
 struct Disruption: Codable {
-    let type, category, categoryDescription, description, created: String
+    let type, category, categoryDescription, description: String
+    let created: String?
     let affectedRoutes, affectedStops: [String?]
     let closureText: String
     let additionalInfo: String?
