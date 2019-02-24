@@ -9,6 +9,7 @@ import Realm
 class TubeLinesState: Object {
 
     @objc dynamic var lastUpdated: Date = Date()
+    @objc dynamic var identifier: String = "tubelinesstate"
     let lineStates = List<LineState>()
 
     init(with lines: [Line], lastUpdated: Date) {
@@ -30,6 +31,10 @@ class TubeLinesState: Object {
 
     required init(realm: RLMRealm, schema: RLMObjectSchema) {
         super.init(realm: realm, schema: schema)
+    }
+
+    override static func primaryKey() -> String? {
+        return "identifier"
     }
 }
 

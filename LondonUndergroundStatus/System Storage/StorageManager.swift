@@ -23,8 +23,11 @@ class StorageManager: StorageInteractor {
     private func cache(state: TubeLinesState) {
         guard let realm = try? Realm() else { return }
         try? realm.write {
-            realm.deleteAll()
-            realm.add(state)
+            guard realm.objects(TubeLinesState.self).first != nil else {
+                realm.add(state)
+                return
+            }
+            realm.add(state, update: true)
         }
     }
 
