@@ -13,16 +13,11 @@
 		749383BE22204610004CC0EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 749383C022204610004CC0EF /* Localizable.strings */; };
 		749383C3222049D9004CC0EF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383C2222049D9004CC0EF /* String+Extensions.swift */; };
 		749383C522204B82004CC0EF /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383C422204B82004CC0EF /* LocalizedStrings.swift */; };
-		749383CC22215EBD004CC0EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 749383CB22215EBD004CC0EF /* Localizable.strings */; };
 		749383CE222186B5004CC0EF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383CD222186B5004CC0EF /* StorageManager.swift */; };
 		749383D22221EDD9004CC0EF /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749383D12221EDD9004CC0EF /* Date+Extensions.swift */; };
 		883CCDF020C2FC18008A2DA1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDEF20C2FC18008A2DA1 /* Line.swift */; };
 		883CCDF220C2FE21008A2DA1 /* TubeLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF120C2FE21008A2DA1 /* TubeLinesState.swift */; };
 		883CCDF420C35679008A2DA1 /* LineInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */; };
-		8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871353F20CAB70B0068865B /* NotificationCenter.framework */; };
-		8871354320CAB70B0068865B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8871354220CAB70B0068865B /* TodayViewController.swift */; };
-		8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8871354420CAB70B0068865B /* MainInterface.storyboard */; };
-		8871354A20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88A4339120A0ABD600EE9B59 /* TubeLineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */; };
 		88C20CA5209FAC04007D5CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */; };
 		88C20CA7209FAC04007D5CF4 /* LineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C20CA6209FAC04007D5CF4 /* LineStatusViewController.swift */; };
@@ -36,17 +31,9 @@
 		88F0CE9420C48FD0007B0955 /* LineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F0CE9320C48FD0007B0955 /* LineInfoView.xib */; };
 		8FCC22666B30537722D6190C /* Pods_LondonUndergroundStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */; };
 		E7657F5D5096A02BCC594472 /* Pods_LondonUndergroundStatusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D29777A2B145633A69F3F3 /* Pods_LondonUndergroundStatusUITests.framework */; };
-		F3FE6D48FBCBDC3D2F03479D /* Pods_LondonUndergroundStatusTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68426A15E8F99C6E85C1C680 /* Pods_LondonUndergroundStatusTodayExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8871354820CAB70B0068865B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88C20C99209FAC04007D5CF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8871353C20CAB70B0068865B;
-			remoteInfo = TubeAppTodayExtension;
-		};
 		88C20CB8209FAC04007D5CF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88C20C99209FAC04007D5CF4 /* Project object */;
@@ -70,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8871354A20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +75,6 @@
 		749383BF22204610004CC0EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		749383C2222049D9004CC0EF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		749383C422204B82004CC0EF /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
-		749383CB22215EBD004CC0EF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		749383CD222186B5004CC0EF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		749383D12221EDD9004CC0EF /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,11 +82,7 @@
 		883CCDEF20C2FC18008A2DA1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		883CCDF120C2FE21008A2DA1 /* TubeLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLinesState.swift; sourceTree = "<group>"; };
 		883CCDF320C35679008A2DA1 /* LineInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoViewController.swift; sourceTree = "<group>"; };
-		8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LondonUndergroundStatusTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8871353F20CAB70B0068865B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		8871354220CAB70B0068865B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		8871354520CAB70B0068865B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		8871354720CAB70B0068865B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A4339020A0ABD600EE9B59 /* TubeLineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeLineColors.swift; sourceTree = "<group>"; };
 		88C20CA1209FAC04007D5CF4 /* LondonUndergroundStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LondonUndergroundStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C20CA4209FAC04007D5CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,15 +107,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8871353A20CAB70B0068865B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8871354020CAB70B0068865B /* NotificationCenter.framework in Frameworks */,
-				F3FE6D48FBCBDC3D2F03479D /* Pods_LondonUndergroundStatusTodayExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88C20C9E209FAC04007D5CF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,17 +200,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8871354120CAB70B0068865B /* LondonUndergroundStatusTodayExtension */ = {
-			isa = PBXGroup;
-			children = (
-				8871354220CAB70B0068865B /* TodayViewController.swift */,
-				8871354420CAB70B0068865B /* MainInterface.storyboard */,
-				8871354720CAB70B0068865B /* Info.plist */,
-				749383CB22215EBD004CC0EF /* Localizable.strings */,
-			);
-			path = LondonUndergroundStatusTodayExtension;
-			sourceTree = "<group>";
-		};
 		887618DF20CC3A850044018E /* Status Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +219,6 @@
 				88C20CA3209FAC04007D5CF4 /* LondonUndergroundStatus */,
 				88C20CBA209FAC04007D5CF4 /* LondonUndergroundStatusTests */,
 				88C20CC5209FAC04007D5CF4 /* LondonUndergroundStatusUITests */,
-				8871354120CAB70B0068865B /* LondonUndergroundStatusTodayExtension */,
 				8871353E20CAB70B0068865B /* Frameworks */,
 				88C20CA2209FAC04007D5CF4 /* Products */,
 				4198D74E595AC22D768B06C8 /* Pods */,
@@ -271,7 +231,6 @@
 				88C20CA1209FAC04007D5CF4 /* LondonUndergroundStatus.app */,
 				88C20CB7209FAC04007D5CF4 /* LondonUndergroundStatusTests.xctest */,
 				88C20CC2209FAC04007D5CF4 /* LondonUndergroundStatusUITests.xctest */,
-				8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,24 +271,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTodayExtension" */;
-			buildPhases = (
-				FB32DA8FF2BD2AA0EC8FAFA0 /* [CP] Check Pods Manifest.lock */,
-				8871353920CAB70B0068865B /* Sources */,
-				8871353A20CAB70B0068865B /* Frameworks */,
-				8871353B20CAB70B0068865B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LondonUndergroundStatusTodayExtension;
-			productName = TubeAppTodayExtension;
-			productReference = 8871353D20CAB70B0068865B /* LondonUndergroundStatusTodayExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88C20CCB209FAC04007D5CF4 /* Build configuration list for PBXNativeTarget "LondonUndergroundStatus" */;
@@ -345,7 +286,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8871354920CAB70B0068865B /* PBXTargetDependency */,
 			);
 			name = LondonUndergroundStatus;
 			productName = TubeApp;
@@ -400,11 +340,6 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
-					8871353C20CAB70B0068865B = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
-					};
 					88C20CA0209FAC04007D5CF4 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1010;
@@ -440,21 +375,11 @@
 				88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */,
 				88C20CB6209FAC04007D5CF4 /* LondonUndergroundStatusTests */,
 				88C20CC1209FAC04007D5CF4 /* LondonUndergroundStatusUITests */,
-				8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8871353B20CAB70B0068865B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8871354620CAB70B0068865B /* MainInterface.storyboard in Resources */,
-				749383CC22215EBD004CC0EF /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88C20C9F209FAC04007D5CF4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,39 +518,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LondonUndergroundStatus/Pods-LondonUndergroundStatus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FB32DA8FF2BD2AA0EC8FAFA0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LondonUndergroundStatusTodayExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8871353920CAB70B0068865B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8871354320CAB70B0068865B /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88C20C9D209FAC04007D5CF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -665,11 +560,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8871354920CAB70B0068865B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8871353C20CAB70B0068865B /* LondonUndergroundStatusTodayExtension */;
-			targetProxy = 8871354820CAB70B0068865B /* PBXContainerItemProxy */;
-		};
 		88C20CB9209FAC04007D5CF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88C20CA0209FAC04007D5CF4 /* LondonUndergroundStatus */;
@@ -691,14 +581,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		8871354420CAB70B0068865B /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8871354520CAB70B0068865B /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		88C20CAF209FAC04007D5CF4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -710,46 +592,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8871354B20CAB70B0068865B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BAD07C45D133EE7732A9CBA /* Pods-LondonUndergroundStatusTodayExtension.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatusTodayExtension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus.TodayExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8871354C20CAB70B0068865B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCCBD754747C2A2C6F79F2D6 /* Pods-LondonUndergroundStatusTodayExtension.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B6C84G57E3;
-				INFOPLIST_FILE = "$(SRCROOT)/LondonUndergroundStatusTodayExtension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.rachelunthank.LondonUndergroundStatus.TodayExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		88C20CC9209FAC04007D5CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -865,7 +707,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A45E8702AEEFD84C8F01903 /* Pods-LondonUndergroundStatus.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -884,7 +725,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 171433262BC3DDF3151530E3 /* Pods-LondonUndergroundStatus.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -972,15 +812,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8871354D20CAB70B0068865B /* Build configuration list for PBXNativeTarget "LondonUndergroundStatusTodayExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8871354B20CAB70B0068865B /* Debug */,
-				8871354C20CAB70B0068865B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		88C20C9C209FAC04007D5CF4 /* Build configuration list for PBXProject "LondonUndergroundStatus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

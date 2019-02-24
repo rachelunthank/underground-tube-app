@@ -1,7 +1,0 @@
-//
-//  Copyright © 2019 rachelunthank. All rights reserved.
-//
-
-"good.service" = "There is a good service on all lines";
-"one.disruption" = "There is a disruption on the {line} line, but a good service is running on all other lines";
-"many.disruptions" = "The {lines} lines are disrupted, but a good service is running on all other lines";
