@@ -194,6 +194,9 @@ extension LineStatusViewController {
                                                  style: .plain,
                                                  target: nil,
                                                  action: nil)
+
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .light)]
+        lastUpdatedToolbarItem?.setTitleTextAttributes(attributes, for: [.normal])
         lastUpdatedToolbarItem?.tintColor = UIColor.black
 
         let spacingButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
