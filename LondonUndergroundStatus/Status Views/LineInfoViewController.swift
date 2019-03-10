@@ -29,7 +29,7 @@ public class LineInfoViewController: UIViewController {
 
     public override func viewDidLoad() {
 
-        lineInfoView.backgroundColor = TubeLineColors(rawValue: line.identifier)?.value
+        lineInfoView.backgroundColor = TubeLines(rawValue: line.identifier)?.colorValue
         lineTitleLabel?.text = line.name
         let status = line.serviceStatus
         let goodService = status == "Good Service"

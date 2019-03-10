@@ -69,6 +69,11 @@ class LineStatusViewController: UIViewController {
         fetchUpdateFromNetwork(completion: nil)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+
+        fetchUpdateFromNetwork(completion: nil)
+    }
+
     @objc func reloadStatus() {
 
         fetchUpdateFromNetwork(completion: {
@@ -128,7 +133,7 @@ extension LineStatusViewController: UICollectionViewDelegate, UICollectionViewDa
         cell?.lineStatusLabel?.text = status
         let goodStatus = status == "Good Service"
         cell?.lineStatusIcon?.image = goodStatus ? UIImage(named: "GoodService") : UIImage(named: "Warning")
-        cell?.backgroundColor = TubeLineColors(rawValue: line.identifier)?.value
+        cell?.backgroundColor = TubeLines(rawValue: line.identifier)?.colorValue
 
         return cell ?? UICollectionViewCell()
     }
@@ -190,7 +195,7 @@ extension LineStatusViewController {
 
     func configureToolbar() {
 
-        lastUpdatedToolbarItem = UIBarButtonItem(title: String(.lastUpdated),
+        lastUpdatedToolbarItem = UIBarButtonItem(title: nil,
                                                  style: .plain,
                                                  target: nil,
                                                  action: nil)
@@ -199,18 +204,38 @@ extension LineStatusViewController {
         lastUpdatedToolbarItem?.setTitleTextAttributes(attributes, for: [.normal])
         lastUpdatedToolbarItem?.tintColor = UIColor.black
 
+        let leftSpacingButtonItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace,
+                                                target: nil,
+                                                action: nil)
+        leftSpacingButtonItem.width = 75
+
         let spacingButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                                 target: nil,
                                                 action: nil)
 
+        let settingsButtonItem = UIBarButtonItem(image: UIImage(named: "Settings"),
+                                                 style: .plain,
+                                                 target: self,
+                                                 action: #selector(displaySettings))
+
         guard let toolbarItem = lastUpdatedToolbarItem else { return }
 
-        statusToolbar.items = [spacingButtonItem, toolbarItem, spacingButtonItem]
+        statusToolbar.items = [leftSpacingButtonItem,
+                               spacingButtonItem,
+                               toolbarItem,
+                               spacingButtonItem,
+                               settingsButtonItem]
     }
 
     func updateLastUpdatedToolbar(with lastUpdated: Date?) {
 
         guard let lastUpdatedString = lastUpdated?.timeElapsedSinceDate() else { return }
         lastUpdatedToolbarItem?.title = lastUpdatedString
+    }
+
+    @objc func displaySettings() {
+        let settingsViewController = SettingsTableViewController()
+        let settingsNavigationController = UINavigationController(rootViewController: settingsViewController)
+        navigationController?.present(settingsNavigationController, animated: true, completion: nil)
     }
 }

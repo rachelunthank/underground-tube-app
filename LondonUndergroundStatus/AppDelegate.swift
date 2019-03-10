@@ -30,25 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setUpDefaultUserSettings() {
 
-        guard UserDefaults.standard.object(forKey: "lineOrder") == nil else { return }
-        UserDefaults.standard.register(defaults: [
-            "lineOrder": ["bakerloo",
-                          "central",
-                          "circle",
-                          "district",
-                          "hammersmith-city",
-                          "jubilee",
-                          "metropolitan",
-                          "northern",
-                          "piccadilly",
-                          "victoria",
-                          "waterloo-city",
-                          "london-overground",
-                          "dlr",
-                          "tram",
-                          "tfl-rail",
-                          "emirates-air-line"]
-            ])
+        if UserDefaults.standard.object(forKey: "lineOrder") == nil {
+            let lines: [String] = TubeLines.allCases.map { $0.rawValue }
+            UserDefaults.standard.register(defaults: ["lineOrder": lines])
+        }
+
+        if UserDefaults.standard.object(forKey: "lineModes") == nil {
+            let lineModes: [String] = LineModes.allCases.map { $0.rawValue }
+            UserDefaults.standard.register(defaults: ["lineModes": lineModes])
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) { }

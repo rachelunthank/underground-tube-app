@@ -5,7 +5,7 @@
 import Foundation
 import UIKit
 
-public enum TubeLineColors: String {
+public enum TubeLines: String, CaseIterable {
     case bakerloo
     case central
     case circle
@@ -23,7 +23,7 @@ public enum TubeLineColors: String {
     case tfl = "tfl-rail"
     case emirates = "emirates-air-line"
 
-    var value: UIColor {
+    var colorValue: UIColor {
         switch self {
         case .bakerloo:
             return UIColor(red: 178/255, green: 99/255, blue: 0/255, alpha: 1.0)
