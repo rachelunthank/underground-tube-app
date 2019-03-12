@@ -1,5 +1,6 @@
 excluded:
   - Pods
+  - LondonUndergroundStatusUITests
 
 line_length: 
   severity: warning

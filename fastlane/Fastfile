@@ -21,4 +21,13 @@ platform :ios do
     build_app(workspace: "LondonUndergroundStatus.xcworkspace", scheme: "LondonUndergroundStatus")
     upload_to_testflight
   end
+  lane :unit_tests do
+  	run_tests(workspace: "LondonUndergroundStatus.xcworkspace", devices: ["iPhone X"], scheme: "LondonUndergroundStatusTests")
+  end
+  lane :ui_tests do
+  	run_tests(workspace: "LondonUndergroundStatus.xcworkspace", devices: ["iPhone X"], scheme: "LondonUndergroundStatusUITests")
+  end
+  lane :screenshots do
+    capture_screenshots
+  end
 end

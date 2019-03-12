@@ -31,6 +31,7 @@
 		88F0CE9420C48FD0007B0955 /* LineInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F0CE9320C48FD0007B0955 /* LineInfoView.xib */; };
 		8FCC22666B30537722D6190C /* Pods_LondonUndergroundStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B94047CEF0B3DB399FBA26C /* Pods_LondonUndergroundStatus.framework */; };
 		D00F38D522346EB800A433FC /* LineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F38D422346EB800A433FC /* LineMode.swift */; };
+		D00F38F522371E1100A433FC /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F38F422371E1100A433FC /* SnapshotHelper.swift */; };
 		D0413F6E222489D1005360FF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0413F6C222489D1005360FF /* SettingsTableViewController.swift */; };
 		D0413F6F222489D1005360FF /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0413F6D222489D1005360FF /* SettingsTableViewController.xib */; };
 		D0413F7222248C9E005360FF /* SettingsLineModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0413F7022248C9E005360FF /* SettingsLineModeTableViewCell.swift */; };
@@ -110,6 +111,7 @@
 		BCCBD754747C2A2C6F79F2D6 /* Pods-LondonUndergroundStatusTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LondonUndergroundStatusTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-LondonUndergroundStatusTodayExtension/Pods-LondonUndergroundStatusTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		C3D29777A2B145633A69F3F3 /* Pods_LondonUndergroundStatusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LondonUndergroundStatusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00F38D422346EB800A433FC /* LineMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineMode.swift; sourceTree = "<group>"; };
+		D00F38F422371E1100A433FC /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		D0413F6C222489D1005360FF /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D0413F6D222489D1005360FF /* SettingsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController.xib; sourceTree = "<group>"; };
 		D0413F7022248C9E005360FF /* SettingsLineModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLineModeTableViewCell.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				88C20CC6209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift */,
+				D00F38F422371E1100A433FC /* SnapshotHelper.swift */,
 				88C20CC8209FAC04007D5CF4 /* Info.plist */,
 			);
 			path = LondonUndergroundStatusUITests;
@@ -574,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C20CC7209FAC04007D5CF4 /* LondonUndergroundStatusUITests.swift in Sources */,
+				D00F38F522371E1100A433FC /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
