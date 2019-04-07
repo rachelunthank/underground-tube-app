@@ -10,11 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-
-        window = UIWindow(frame: UIScreen.main.bounds)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         setUpDefaultUserSettings()
 
@@ -22,9 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storageInteractor = StorageManager()
         let statusViewController = LineStatusViewController(service: networkService,
                                                             storage: storageInteractor)
+
         let navController = UINavigationController(rootViewController: statusViewController)
+
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
+
         return true
     }
 

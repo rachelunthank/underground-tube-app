@@ -31,12 +31,18 @@ public class LineInfoViewController: UIViewController {
 
         lineInfoView.backgroundColor = TubeLines(rawValue: line.identifier)?.colorValue
         lineTitleLabel?.text = line.name
+
         let status = line.serviceStatus
         let goodService = status == "Good Service"
 
         lineStatusIconImageView.image = goodService ? UIImage(named: "GoodService") : UIImage(named: "Warning")
 
-        lineStatusDescriptionLabel.text = goodService ? String(.goodService) : line.disruptionDescription
+        var statusDescription = line.disruptionDescription
+        if let range = line.disruptionDescription?.range(of: ":") {
+            statusDescription = line.disruptionDescription?[range.upperBound...].trimmingCharacters(in: .whitespaces)
+        }
+
+        lineStatusDescriptionLabel.text = goodService ? String(.goodService) : statusDescription
 
         lineStatusDescriptionLabel.sizeToFit()
     }

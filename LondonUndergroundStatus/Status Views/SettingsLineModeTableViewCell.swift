@@ -59,7 +59,8 @@ class SettingsLineModeTableViewCell: UITableViewCell {
         UserDefaults.standard.set(lineModes, forKey: "lineModes")
 
         var lineOrder = UserDefaults.standard.object(forKey: "lineOrder") as? [String]
-        guard let line = lineModeAsLine(lineMode), let orderIndex = lineOrder?.firstIndex(of: line.rawValue) else { return }
+        guard let line = lineModeAsLine(lineMode),
+            let orderIndex = lineOrder?.firstIndex(of: line.rawValue) else { return }
         lineOrder?.remove(at: orderIndex)
         UserDefaults.standard.set(lineOrder, forKey: "lineOrder")
     }

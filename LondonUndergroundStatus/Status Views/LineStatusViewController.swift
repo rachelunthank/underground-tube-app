@@ -86,14 +86,21 @@ class LineStatusViewController: UIViewController {
 
     func fetchUpdateFromNetwork(completion: (() -> Void)?) {
 
-        networkService.update(completion: { (lines) in
+        networkService.update(completion: { (lines, error) in
+
+            guard error == nil else {
+                completion?()
+                return
+            }
 
             guard let lineStates = lines else {
                 completion?()
                 return
             }
+
+            let currentDate = Date()
             self.storageService.saveToStorage(lines: lineStates,
-                                              lastUpdated: Date())
+                                              lastUpdated: currentDate)
 
             DispatchQueue.main.async {
 
@@ -199,9 +206,10 @@ extension LineStatusViewController {
                                                  style: .plain,
                                                  target: nil,
                                                  action: nil)
+        lastUpdatedToolbarItem?.isEnabled = false
 
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .light)]
-        lastUpdatedToolbarItem?.setTitleTextAttributes(attributes, for: [.normal])
+        lastUpdatedToolbarItem?.setTitleTextAttributes(attributes, for: [.disabled])
         lastUpdatedToolbarItem?.tintColor = UIColor.black
 
         let leftSpacingButtonItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace,

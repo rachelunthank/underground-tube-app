@@ -4,6 +4,11 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case decodingError
+    case dataError
+}
+
 class LineStatusFetcher: NetworkService {
 
     private var apiUrl: URL? {
@@ -28,20 +33,29 @@ class LineStatusFetcher: NetworkService {
         return components.url
     }
 
-    public func update(completion: @escaping ([Line]?) -> Void) {
+    public func update(completion: @escaping ([Line]?, Error?) -> Void) {
 
         guard let apiUrl = apiUrl else { return }
 
-        URLSession.shared.dataTask(with: apiUrl, completionHandler: { (data, response, error) in
-            if error != nil {
-                // handle network error
-                print(response.debugDescription)
-                completion(nil)
+        URLSession.shared.dataTask(with: apiUrl, completionHandler: { (data, _, error) in
+
+            guard error == nil else {
+                completion(nil, error)
+                return
             }
-            if let statusData = data {
-                guard let lines = try? JSONDecoder().decode([Line].self, from: statusData) else { return }
-                completion(lines)
+
+            guard let statusData = data else {
+                completion(nil, NetworkError.dataError)
+                return
             }
+
+            let lines = try? JSONDecoder().decode([Line].self, from: statusData)
+            guard lines != nil else {
+                completion(nil, NetworkError.decodingError)
+                return
+            }
+
+            completion(lines, nil)
         }).resume()
     }
 }
